@@ -52,7 +52,7 @@ sample input dataset:
 	- small number of unique users
 	- or a combination of the above metrics
 
-## 9. Write about how to scale
+## 9. Scale consideration
 
 It can be scaled using parallelization. Using MapReduce to achieve multi-threading process. 
 
@@ -60,7 +60,7 @@ First partition the topic. Then count the unique ID per minite in each part. Nex
 
 We can also try different algorithm. Using bitmap is one possible way, which is very memory efficient. Bitmap is a great data structure to consider whenever memory space is at a premium: OS kernels (memory pages, inodes etc), digital imaging etc. However in this way we probably will have to sacrifice the result accuracy due to collision.
 
-## 10. Only now think about the edge cases, options and other things
+## 10. Edge cases, options and other consideration
 
 We can improve the algothim's accuracy by continuing counting for the previous minute within certain time or record limit. This is helpful especially when the input data is not exactly in order. For example, we could set a latency scheme to print out: we continue to count for the previous minite for another 5s. or for another 1000 records, before we print out the count of unique IDs at previous minute. 
 
