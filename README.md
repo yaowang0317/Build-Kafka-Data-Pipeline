@@ -16,6 +16,8 @@
 
 ## 3. Use the kafka producer from kafka itself to send our test data to your topic
 
+Download the sample raw data from here: https://kafkarawdata.s3.us-east-2.amazonaws.com/stream.jsonl.gz
+
 `gzcat stream.jsonl.gz |../../kafka_2.12-2.4.1/bin/kafka-console-producer.sh --broker-list localhost:9092 --topic input_topic`
 
 ## 4. Create a small app that reads this data from kafka and prints it to stdout
