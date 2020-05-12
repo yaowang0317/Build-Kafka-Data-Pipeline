@@ -52,7 +52,7 @@ sample input dataset:
 	- small number of unique users
 	- or a combination of the above metrics
 
-## 9. Write about how you could scale
+## 9. Write about how to scale
 
 It can be scaled using parallelization. Using MapReduce to achieve multi-threading process. 
 
